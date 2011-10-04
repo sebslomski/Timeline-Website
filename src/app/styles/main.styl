@@ -3,22 +3,26 @@
 pageWidth = 840px
 
 body
-  padding-top 100px
+  padding-top 60px
+  background-color #f90
+  -webkit-background-size 30px 30px
+  background-image -webkit-linear-gradient(0deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent)
+  font-family helvetica
 
 .container
   width pageWidth
   margin 0 auto
+  background url(../../images/header-bg.jpg)
 
 header
+
   #header-top
     z-index 10
     position relative
     width 100%
     height 200px
     margin-bottom -20px
-    background lightblue
-    border 1px solid gray
-    border-bottom none
+    background url(../../images/header-bg.jpg)
 
   #header-bar-skews
     z-index 5
@@ -33,15 +37,59 @@ header
     z-index 5
     position relative
     margin 0 -10px
-    height 60px
+    padding 20px
     background #5E9FA3
     border-top 1px solid #376A6E
     border-bottom 1px solid #7CB0B3
     -webkit-box-shadow 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 10px 25px rgba(0, 0, 0, 0.3)
 
+    h1
+      font-size 30px
+      color white
+
 
 #content
-  height 400px
-  background lightblue
-  border 1px solid gray
-  border-top none
+  position relative
+  padding 0 20px
+
+  #timeline
+    position absolute
+    top 0
+    right 50%
+    height 100%
+    width 3px
+    background lightblue
+    margin-right -2px
+    outline 0 none
+
+  .event
+    height 200px
+    width 370px
+    background lightblue
+    margin 20px 0
+    position relative
+    border-radius 3px
+
+    .triangle
+      position absolute
+      top 20px
+      border-width 10px 10px 10px 10px
+      border-style solid
+
+    &.left
+      float left
+
+      .triangle
+        right -20px
+        border-color transparent transparent transparent lightblue
+
+    &.right
+      float right
+
+      .triangle
+        left -20px
+        top 40px
+        border-color transparent lightblue transparent transparent
+
+.clear
+  clear both
